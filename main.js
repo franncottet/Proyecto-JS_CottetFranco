@@ -6,7 +6,7 @@ let number= prompt("ingrese un número del 1 al 11 para ver el jugador de fútbo
 while (number!="SALIR") {
     switch (number) {
         case "1":
-            alert("El portero del equipo es EMILIANO 'Dibu' MARTINEZ")
+            alert("El portero del equipo es EMILIANO 'Dibu' MARTINEZ");
             break;
             case "2":
                 alert("El primer central de la selección argentina es CRISTIAN 'Cuti' ROMERO");
