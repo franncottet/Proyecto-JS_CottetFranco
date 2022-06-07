@@ -23,7 +23,7 @@ function Calculocuotafinal() {
 //Ejecutar el While - "Si" se cumplen las condiciones, se ejecutan las funciones y se informa al usuario el número y monto de cada cuota, sino, se sale del sistema o se pide que ingrese un nuevo número.
 
 while (dinero!=0) {
-    if (dinero<=100000 && dinero>=5000) {
+    if (dinero<=100000 && dinero>=5000 && cuotas>=3 && cuotas<=24) {
         
         Calculointeres();
         Calculocuotafinal();
@@ -31,7 +31,7 @@ while (dinero!=0) {
     }else if(dinero==0){
         break
     }else{
-        alert("el número ingresado no es correcto, recuerde que el mínimo es $5.000 y el máximo es $100.000");
+        alert("el número ingresado no es correcto, recuerde que el mínimo es $5.000 y el máximo es $100.000. Desde 3 cuotas a 24 cuotas");
     }
     
     
