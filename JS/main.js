@@ -1,11 +1,78 @@
 // DESAFÍO  "INCORPORAR ARRAYS"
 
-//PARA MI PROYECTO VOY A HACER UNA PÁGINA WEB DE PRESTAMOS Y ADELANTOS DE DINERO. QUE A PARTIR DEL DINERO PRESTADO Y EL TIEMPO QUE DEMORE LA DEVOLUCIÓN DEL DINERO (3 cuotas, 6 cuotas, 12 cuotas, 15 cuotas, 18 cuotas, 24 cuotas) CALCULE AUTOMATICAMENTE EL INTERES MENSUAL
+
+let edad;
+let antlaboral;
+let deudas;
+
+class persona{
+    constructor(person, edad, ocupacion, antlaboral, deudas){
+        this.person=person;
+        this.edad=edad
+        this.ocupacion=ocupacion;
+        this.antlaboral=antlaboral;
+        this.deudas=deudas
+    }
+}
+
+let personas=[];
+
+personas.push=new persona(prompt("Ingresa tu nombre y apellido"), prompt("Ingresa tu edad"),prompt("Ingresa tu ocupacion"), prompt("Ingresa tu antiguedad laboral en años y meses con coma (ejemplo: 1 año y medio serian -> 1,6"),
+prompt("Estas libre de deudas? Escribir SI o NO") )
+
+console.log(personas)
+
+
+    if (edad>=18 && antlaboral>=1 && deudas==SI ) {
+        console.log("Felicidades, cumple con todos los requisitos para solicitar una cotización")
+    }else{
+        console.log("No cumple con todos los requisitos para solicitar una cotización: Ser mayor a 18 años, antiguedad laboral de 1 año y estar libre de deudas ")
+    }
+
+    
+    
+
+
 
 //INTERES ==> 72% de interes anual (6% mensual=0,06)
 
+let bienvenida=prompt("Bienvenido a la aplicacion para calcular prestamos. Escriba OK para continuar, de otra manera, el sistema se cerrará");
 
+
+if(bienvenida ==="OK" || bienvenida ==="Ok" || bienvenida ==="ok" ){
+    // Ingreso dato de dinero
+    let dinero=parseInt(prompt("¿Cuanta cantidad de dinero quiere recibir? Recuerde que el mínimo es $5.000 y el máximo es $100.000"));
+    //Proceso el dato del dinero
+    if (dinero <=100000 && dinero>=5000) {
+        //Si el monto ingresado cumple la condicion.. calculo los intereses
+        //Creo la función
+        function Calculointeres() {
+            //Ingreso dato del dinero
+            let interes=dinero*0.06
+            //Creo una función que procese los datos ingresados por el usuario
+            function Calculocuotafinal() {
+                let cuotas=parseInt(prompt("¿En cuantas cuotas lo vas a devolver? Desde 3 cuotas a 24 cuotas"));
+                cuotamensual=(dinero/cuotas)+interes;
+                return cuotamensual;
+            };
+            //Llamo a la función creada.
+            return Calculocuotafinal();5500
+        }
+        //Llamo a la función que cree + salida de los datos.
+        alert("Deberas abonar " + Calculointeres() + " por mes");
+    }
+    
+} else {
+    alert ("Gracias, vuelva pronto");
+}
+
+
+
+
+/*
 //Solicitar al usuario que seleccione la cantidad de dinero a recibir. (min. $5000 - max.$100.000)
+
+let bienvenida=prompt("Bienvenido a la aplicacion para calcular prestamos. Escriba OK para continuar o ESC para salir.");
 
 
 let dinero=parseInt(prompt("¿Cuanta cantidad de dinero quiere recibir? Recuerde que el mínimo es $5.000 y el máximo es $100.000 - Escriba 0 para SALIR"));
@@ -39,4 +106,4 @@ while (dinero!=0) {
     cuotas=parseInt(prompt("¿En cuantas cuotas lo vas a devolver? Desde 3 cuotas a 24 cuotas"))
 }
 
-
+*/
