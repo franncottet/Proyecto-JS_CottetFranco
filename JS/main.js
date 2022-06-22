@@ -35,7 +35,7 @@ for (let prop in Persona) {
     
     
 
-/*
+
 
 //INTERES ==> 72% de interes anual (6% mensual=0,06)
 
