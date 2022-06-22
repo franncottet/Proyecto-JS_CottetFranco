@@ -1,40 +1,45 @@
-// DESAFÍO  "INCORPORAR ARRAYS"
+// 1RA ENTREGA PROYECTO FINAL
 
 
-let edad;
-let antlaboral;
-let deudas;
 
-class persona{
-    constructor(person, edad, ocupacion, antlaboral, deudas){
+class Persona{
+    constructor(person, edad, ocupacion, antlaboral, libredeudas){
         this.person=person;
         this.edad=edad
         this.ocupacion=ocupacion;
         this.antlaboral=antlaboral;
-        this.deudas=deudas
+        this.libredeudas=libredeudas
     }
+    
 }
 
-let personas=[];
 
-personas.push=new persona(prompt("Ingresa tu nombre y apellido"), prompt("Ingresa tu edad"),prompt("Ingresa tu ocupacion"), prompt("Ingresa tu antiguedad laboral en años y meses con coma (ejemplo: 1 año y medio serian -> 1,6"),
+
+let personas=new Persona(prompt("Ingresa tu nombre y apellido"), parseInt(prompt("Ingresa tu edad")) ,prompt("Ingresa tu ocupacion"), parseInt(prompt("Ingresa tu antiguedad laboral en años y meses con coma (ejemplo: 1 año y medio serian -> 1,6")) ,
 prompt("Estas libre de deudas? Escribir SI o NO") )
 
 console.log(personas)
 
-
-    if (edad>=18 && antlaboral>=1 && deudas==SI ) {
+for (let prop in Persona) {
+    
+    if (this.edad>=18 && this.antlaboral>=1 && this.libredeudas==SI ) {
         console.log("Felicidades, cumple con todos los requisitos para solicitar una cotización")
     }else{
         console.log("No cumple con todos los requisitos para solicitar una cotización: Ser mayor a 18 años, antiguedad laboral de 1 año y estar libre de deudas ")
     }
+}
+
+
+    
 
     
     
 
-
+/*
 
 //INTERES ==> 72% de interes anual (6% mensual=0,06)
+
+
 
 let bienvenida=prompt("Bienvenido a la aplicacion para calcular prestamos. Escriba OK para continuar, de otra manera, el sistema se cerrará");
 
@@ -56,7 +61,7 @@ if(bienvenida ==="OK" || bienvenida ==="Ok" || bienvenida ==="ok" ){
                 return cuotamensual;
             };
             //Llamo a la función creada.
-            return Calculocuotafinal();5500
+            return Calculocuotafinal();
         }
         //Llamo a la función que cree + salida de los datos.
         alert("Deberas abonar " + Calculointeres() + " por mes");
