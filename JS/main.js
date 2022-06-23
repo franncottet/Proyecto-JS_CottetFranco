@@ -1,4 +1,6 @@
-// 1RA ENTREGA PROYECTO FINAL
+// 
+
+
 
 
 
@@ -20,9 +22,10 @@ prompt("Estas libre de deudas? Escribir SI o NO") )
 
 console.log(personas)
 
+
 for (let prop in Persona) {
     
-    if (this.edad>=18 && this.antlaboral>=1 && this.libredeudas==SI ) {
+    if (prop.edad>=18 && prop.antlaboral>=1 && prop.libredeudas==SI ) {
         console.log("Felicidades, cumple con todos los requisitos para solicitar una cotización")
     }else{
         console.log("No cumple con todos los requisitos para solicitar una cotización: Ser mayor a 18 años, antiguedad laboral de 1 año y estar libre de deudas ")
@@ -30,8 +33,14 @@ for (let prop in Persona) {
 }
 
 
-    
+const listaDatos = document.querySelector("#listaDatos")
+const arrayDatos =[this.edad, this.ocupación, this.antlaboral, this.libredeudas]
 
+for (const prop of arrayDatos) {
+    console.log(prop);
+}
+    
+console.log(listaDatos);
     
     
 
