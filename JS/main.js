@@ -1,5 +1,19 @@
 // 
 
+let boton = document.getElementById("#solicitarPrestamo")
+let cotizacionFinal = document.getElementById ("cotizacionFinal")
+
+function calculoInteres() {
+    let dineroSolicitado= document.getElementById("dineroSolicitado").value;
+    let cuotas=document.getElementById("cuotas").value;
+    let interes=dineroSolicitado*0.06
+    cotizacionFinal.innerHTML=`Deberas abonar ${interes} por mes`
+
+boton.addEventListener("click", calculoInteres())
+
+ 
+
+
 /*
 
 
