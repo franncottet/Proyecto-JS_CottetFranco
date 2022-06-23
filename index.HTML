@@ -1,23 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>Adelantos Now</title>
 </head>
+
 <body>
-    <h1>ADELANTOS NOW</h1> <br>
-    <h3>"ADELANTOS NOW" - SERVICIO DE PRESTAMOS ONLINE</h3>
-    
-<!--LISTA EN DONDE SE PINTAN LOS DATOS DE LA PERSONA-->
-    <ul id="listaDatos">
-     "Texto de prueba"
-    </ul>
 
+    <header>
+        <!-- NAV BAR -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">ADELANTOS NOW</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Prestamos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Nuestros servicios</a>
+                        </li>
 
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
 
+    <main>
+
+        <div class="container">
+            <h1 class="text-center mt-5"> Cotizá tu prestamo aquí </h1>
+            <div class="row justify-content-center mt-5">
+                <label class="col-3 col-form-label">
+                    ¿Cuanta cantidad de dinero quiere recibir? Recuerde que el mínimo es $5.000 y el máximo es $100.000"
+                </label>
+                <div class="col-8 col-md-4">
+                    <input type="number" class="form-control" id="dineroSolicitado">
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5">
+                <label class="col-3 col-form-label">
+                    ¿En cuantas cuotas lo vas a devolver? Desde 3 cuotas a 24 cuotas
+                </label>
+                <div class="col-8 col-md-4">
+                    <input type="number" class="form-control" id="cuotas">
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5">
+                <div class="col-8 col-md-4">
+                    <button class="btn btn-success col-12" id="prestamo">Cotizar préstamo</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
     <script src="JS/main.js"></script>
 </body>
+
 </html>
