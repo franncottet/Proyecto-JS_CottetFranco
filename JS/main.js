@@ -1,6 +1,6 @@
 // 
 
-let boton = document.getElementById("#solicitarPrestamo")
+let boton = document.getElementById("solicitarPrestamo")
 let cotizacionFinal = document.getElementById ("cotizacionFinal")
 
 function calculoInteres() {
@@ -8,8 +8,9 @@ function calculoInteres() {
     let cuotas=document.getElementById("cuotas").value;
     let interes=dineroSolicitado*0.06
     cotizacionFinal.innerHTML=`Deberas abonar ${interes} por mes`
+}
 
-boton.addEventListener("click", calculoInteres())
+boton.addEventListener("click", calculoInteres)
 
  
 
