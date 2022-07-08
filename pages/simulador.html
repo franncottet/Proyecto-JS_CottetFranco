@@ -28,10 +28,10 @@
                             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/pages/simulador.html">Cotizador</a>
+                            <a class="nav-link" href="simulador.html">Cotizador</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/pages/services.html">Nuestros servicios</a>
+                            <a class="nav-link" href="#">Nuestros servicios</a>
                         </li>
 
                     </ul>
@@ -47,7 +47,33 @@
     <main>
 
         <div class="container">
-           
+            <h1 class="text-center mt-5"> Cotizá tu prestamo aquí </h1>
+            <div class="row justify-content-center mt-5">
+                <label class="col-3 col-form-label">
+                    ¿Cuanta cantidad de dinero quiere recibir? Recuerde que el mínimo es $5.000 y el máximo es $100.000"
+                </label>
+                <div class="col-8 col-md-4">
+                    <input type="number" class="form-control" id="dineroSolicitado">
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5">
+                <label class="col-3 col-form-label">
+                    ¿En cuantas cuotas lo vas a devolver? Desde 3 cuotas a 24 cuotas
+                </label>
+                <div class="col-8 col-md-4">
+                    <input type="number" class="form-control" id="cuotas">
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5">
+                <div class="col-8 col-md-4">
+                    <button class="btn btn-success col-12" id="solicitarPrestamo">Cotizar préstamo</button>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+               <div class="alert alert-success col-8 mt-5" id="cotizacionFinal" role="alert">
+                
+               </div>
+            </div>
         </div>
 
     </main>

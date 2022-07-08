@@ -1,0 +1,152 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Adelantos Now</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- NAV BAR -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">ADELANTOS NOW</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="simulador.html">Cotizador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Nuestros servicios</a>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+<!-- EN ESTA PÁGINA, PEDIREMOS AL USUARIO QUE INGRESE SUS DATOS, Y LUEGO EN JS SE VA A CORROBAR SI PUEDE REALIZAR O NO UN PRESTAMO SEGUN EL ESTADO -->
+        <div class="container">
+            <h2 class="text-center mt-5"> Antes de solicitar tu prestamo, inicia sesión o registrate</h2>
+
+           <form class="mt-3">
+           
+            <input 
+            class="form-control mb-2" 
+            type="text" 
+            name="userName" 
+            placeholder="Ingrese su nombre y apelldio" 
+            id="userName"
+            required
+           
+            >
+
+          
+                <input 
+                class="form-control mb-2" 
+                type="text" 
+                name="edad" 
+                placeholder="Ingrese su edad" 
+                id="edad"
+                required
+               
+                >
+
+                <input 
+                class="form-control mb-2" 
+                type="text" 
+                name="edad" 
+                placeholder="Ingrese su nacionalidad" 
+                id="edad"
+                required
+               
+                >
+
+                
+                <select 
+                class="form-select" name="cosa" onchange="cambia()" id="antiguedad">
+                        <option value="0">Trabajo en:
+                        <option value="1">Relacion de dependencia
+                        <option value="2">Profesional Independiente
+                        <option value="3">Comerciante o autónomo independiente
+                        
+                    </select>
+                    
+                    <select class="seleccion" name="opt">
+                        <option value="-">-
+                    </select>
+                    
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="Deuda sí">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Declaro que me encuentro libre de deudas y mi nombre no se encuentra en la central de riesgo.
+                    </label>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                    <label class="form-check-label" for="flexCheckChecked">
+                          Declaro que tengo antiguedad laboral de: 
+                          - 6 o más meses en relación de dependencia <br>
+                          - 6 o más meses en relación de dependencia 
+                    </label>
+                  </div>
+                 
+
+                    <input 
+                    class="form-control mb-2" 
+                    type="text" 
+                    name="ocupacion" 
+                    placeholder="Ingrese su edad" 
+                    id="ocupacion"
+                    required
+                   
+                    >
+                    
+                    <input 
+                    class="form-control mb-2" 
+                    type="text" 
+                    name="deudas" 
+                    placeholder="Ingrese su edad" 
+                    id="deudas"
+                    required
+                   
+                    >
+
+            <input 
+            class="form-control mb-2" 
+            type="email" 
+            name="userEmail" 
+            placeholder="Ingrese su correo electronico" 
+            id="userEmail"
+            required
+            pattern="[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+            >
+            
+            <button class="btn btn-primary" type="submit">Enviar</button>
+           </form>
+        </div>
+
+    </main>
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
