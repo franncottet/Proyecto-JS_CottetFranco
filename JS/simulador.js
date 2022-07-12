@@ -1,4 +1,4 @@
-let boton = document.getElementById("solicitarPrestamo")
+let boton = document.getElementById("cotizarPrestamo")
 let cotizacionFinal = document.getElementById ("cotizacionFinal")
 
 function calculoInteres() {
@@ -10,3 +10,4 @@ function calculoInteres() {
 }
 
 boton.addEventListener("click", calculoInteres)
+
