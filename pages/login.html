@@ -8,7 +8,7 @@
     <title>Adelantos Now</title>
 </head>
 
-<body>
+<body style="font-family: sf compact, serif;">
 
     <header>
         <!-- NAV BAR -->
@@ -46,9 +46,9 @@
 
 <!-- EN ESTA PÁGINA, PEDIREMOS AL USUARIO QUE INGRESE SUS DATOS, Y LUEGO EN JS SE VA A CORROBAR SI PUEDE REALIZAR O NO UN PRESTAMO SEGUN EL ESTADO -->
         <div class="container">
-            <h2 class="text-center mt-5"> Antes de solicitar tu prestamo, necesitamos validar tus datos</h2>
+            <h2 class="text-center mt-5"> Te pedimos que valides los siguientes datos, antes de solicitar tu prestamo</h2>
 
-           <form class="mt-3" name="formulario1" action="#">
+           <form class="mt-3" id="formulario" novalidate>
            
             <input 
             class="form-control mb-2" 
@@ -57,8 +57,10 @@
             placeholder="Ingrese su nombre y apelldio" 
             id="userName"
             required
-           
+            value="Franco Cottet"
             >
+
+            <p class="text-danger mb-2 d-none" id="NameError">Ingrese solo letras en el nombre</p>
 
           
                 <input 
@@ -68,22 +70,38 @@
                 placeholder="Ingrese su edad" 
                 id="edad"
                 required
-               
+                
                 >
 
+                
+
                 <input 
-                class="form-control mb-2" 
-                type="text" 
-                name="edad" 
-                placeholder="Ingrese su nacionalidad" 
-                id="edad"
-                required
-               
-                >
- 
+           
+                    class="form-control mt-2 mb-2" 
+                    type="email" 
+                    name="userEmail" 
+                    placeholder="Ingrese su correo electronico" 
+                    id="userEmail"
+                    required
+                    title="Ingresa un correo válido"
+                    value="cottetfranco@gmail.com"
+                    >
+
+                    <p class="text-danger mb-2 d-none" id="EmailError">Ingrese un Email válido</p>
+
+                <div class="col-md-3 mb-3">
+                <label for="pais">País de nacionalidad</label>
+                <select name="pais" id="pais" class="form-select">
+                    <option>Argentina</option>
+                    <option>Chile</option>
+                    <option>Uruguay</option>
+                    <option>Paraguay</option>
+                    <option>Perú</option>
+                </select>
+            </div>
                 
                 <select 
-                class="form-select" id="trabajo" onchange="getSelectValue()">
+                class="form-select" id="trabajo">
                         <option value="0">Trabajo en:
                         <option value="1">Relacion de dependencia
                         <option value="2">Profesional Independiente
@@ -91,33 +109,26 @@
                         
                     </select>
                 
-                
+                    
 
-                <div class="form-check mt-3">
+                <div class="form-check mt-3 mb-3">
                         <input class="form-check-input" type="checkbox" value="" id="Deuda sí">
                         <label class="form-check-label" for="flexCheckDefault">
                           Declaro que me encuentro libre de deudas y mi nombre no se encuentra en la central de riesgo.
                         </label>
                  
-
+                    </div>
                 
 
-            <input 
-           
-            class="form-control mt-2 mb-2" 
-            type="email" 
-            name="userEmail" 
-            placeholder="Ingrese su correo electronico" 
-            id="userEmail"
-            required
-            pattern="[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
-            >
+            
             
             <button class="btn btn-primary" type="submit">Enviar</button>
            </form>
-        </div>
-
-    </main>
+        <div class="alert alert-success my-2 d-none" id="alertSuccess"></div>
+    <div class="card shadow">
+            <img src="../img/mujer.jpg" class="card-img-top"  alt="Servicio3">
+    </div>
+</main>
     <script src="../JS/login.js"></script>
 </body>
 
