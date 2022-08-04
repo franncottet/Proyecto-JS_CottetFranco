@@ -1,16 +1,47 @@
 let boton = document.getElementById("cotizarPrestamo")
 let cotizacionFinal = document.getElementById ("cotizacionFinal")
+let dineroSolicitado= document.getElementById("dineroSolicitado")
+let cuotas=document.getElementById("cuotas")
+
+let tabla_cuota= document.getElementById("tabla_cuota")
+let tabla_interes= document.getElementById("tabla_interes")
+let tabla_final= document.getElementById("tabla_final")
 
 function calculoInteres() {
-    let dineroSolicitado= document.getElementById("dineroSolicitado").value;
+    let dineroSolicitado= document.getElementById("dineroSolicitado").value
     let cuotas=document.getElementById("cuotas").value;
     let interes=dineroSolicitado*0.06
     let cuotaMensual=(dineroSolicitado/cuotas)+interes
-    cotizacionFinal.innerHTML=`Deberas abonar ${cuotaMensual} por mes`
+    cotizacionFinal.innerHTML=`Deberas abonar ${cuotaMensual.toFixed(2)} por mes`
+    tabla_cuota.innerHTML= ` ${cuotas}`
+    tabla_interes.innerHTML= `$ ${interes}`
+    tabla_final.innerHTML= `$ ${cuotaMensual.toFixed(2)}`
 }
 
-boton.addEventListener("click", calculoInteres)
+function presionarBoton() {
+    
+    if (dineroSolicitado.value<5000 || dineroSolicitado.value>100000 || cuotas.value<3 || cuotas.value>24) {
+        cotizacionFinal.innerHTML="Error, recuerde que el mínimo es $5.000 y el máximo es $100.000 y las cuotas deben ser de 3 a 24"
+        cotizacionFinal.classList.remove("alert-success")
+        cotizacionFinal.classList.add("alert-danger")
+        
+      } else if (dineroSolicitado.value>=5000 && dineroSolicitado.value<=100000 && cuotas.value>=3 && cuotas.value<=24){
+        cotizacionFinal.classList.remove("alert-danger")
+        cotizacionFinal.classList.add("alert-success")
+        calculoInteres()
+    }
+}
 
+boton.addEventListener("click", presionarBoton)
+
+
+
+/*
+if (dineroSolicitado.value<=5000 || dineroSolicitado.value>=100000 || cuotas.value<=3 || cuotas.value>=24) {
+    return alert("Error")
+}else if (dineroSolicitado.value<=5000 && dineroSolicitado.value>=100000 && cuotas.value<=3 || cuotas.value>=24) {
+    boton.addEventListener("click", calculoInteres)
+}
 
 
 
