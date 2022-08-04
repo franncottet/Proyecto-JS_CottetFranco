@@ -1,8 +1,40 @@
+let oficial_compra = document.getElementById("oficial_compra")
+
+let oficial_venta = document.getElementById("oficial_venta")
+
+let blue_compra = document.getElementById("blue_compra")
+
+let blue_venta = document.getElementById("blue_venta")
+
+//Se utilizó una API libre, que tiene los valores del dolar oficial y blue actualizados todos los días
+
+function valorDolar() {
+    fetch('https://api.bluelytics.com.ar/v2/latest')
+        .then(res => res.json())
+        .then(data=>{
+            oficial_compra.innerHTML = data.oficial.value_buy;
+            oficial_venta.innerHTML = data.oficial.value_sell;
+            blue_compra.innerHTML = data.blue.value_buy;
+            blue_venta.innerHTML = data.blue.value_sell;
+
+        })
+
+}
+
+valorDolar()
+
+
+//value_buy: 282.67
+//value_sell: 291
+
 // 
 
 
 /*
-
+oficial_compra.innerHTML = data.oficial.value_buy;
+            oficial_venta.innerHTML = data.oficial.value_sell;
+            blue_compra.innerHTML = data.blue.value_buy;
+            blue_venta.innerHTML = data.blue.value_sell;
 
 
 class Persona{
