@@ -27,7 +27,7 @@ formulario.addEventListener("submit", e=>{
 
     alertSuccess.classList.add("d-none")
 
-    //e.preventDefault();
+    e.preventDefault();
 
     const errores=[];
 
