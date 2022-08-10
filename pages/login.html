@@ -67,10 +67,9 @@
                 placeholder="Ingrese su edad" 
                 id="edad"
                 required
-                
                 >
 
-                
+            <p class="text-danger mb-2 d-none" id="edadError">Ingresa una edad válida. Recuerda que debes ser mayor de 18 años.</p>
 
                 <input 
            
@@ -105,11 +104,20 @@
                         <option value="3">Comerciante o autónomo independiente
                         
                     </select>
+
+
+                <div class="form-check mt-3 mb-3 d-none">
+                        <input class="form-check-input" type="checkbox" value="" id="antiguedad">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Declaro que tengo una antigüedad laboral de 3 meses en relación de dependencia
+                        </label>
+                 
+                 </div>
                 
                     
 
                 <div class="form-check mt-3 mb-3">
-                        <input class="form-check-input" type="checkbox" value="" id="Deuda sí">
+                        <input class="form-check-input" type="checkbox" value="" id="deuda">
                         <label class="form-check-label" for="flexCheckDefault">
                           Declaro que me encuentro libre de deudas y mi nombre no se encuentra en la central de riesgo.
                         </label>
@@ -122,7 +130,7 @@
             <button class="btn btn-primary" type="submit">Enviar</button>
            </form>
         <div class="alert alert-success my-2 d-none" id="alertSuccess"></div>
-    <div class="card shadow">
+    <div class="card shadow ">
             <img src="../img/mujer.jpg" class="card-img-top"  alt="Servicio3">
     </div>
 </main>
@@ -130,7 +138,7 @@
 <footer>
     <div class="row mt-5 p-5 bg-light text-dark">
         <div class="col-xs-12 col-md-6 col-lg-3">
-            <a href="https://web.whatsapp.com/"><img src="../img/Logo.png" width="70" alt=""></a>
+            <a href="../index.html"><img src="../img/Logo.png" width="70" alt=""></a>
             <p class="h3">Adelantos Now</p>
             <p class="h5">Santa Fe, Argentina</p>
         </div>
